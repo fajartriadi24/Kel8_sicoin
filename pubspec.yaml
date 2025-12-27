@@ -1,0 +1,42 @@
+name: sicoin
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  # Sesuaikan versi SDK jika perlu
+  sdk: '>=3.4.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  intl: ^0.19.0
+  cupertino_icons: ^1.0.8
+  lottie: ^3.1.2
+  video_player: ^2.8.6
+
+  # =============================================================
+  # === DEPENDENSI PENTING UNTUK PROYEK INI ===
+  sqflite: ^2.3.3+1  # Database offline
+  path: ^1.9.0       # Helper untuk path database
+  uuid: ^4.4.0       # <-- INI YANG PALING PENTING UNTUK MEMPERBAIKI ERROR
+  # =============================================================
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+  # Paket untuk mengganti nama paket aplikasi (bundle ID)
+  change_app_package_name: ^1.1.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/animations/
+    - assets/videos/
