@@ -5,7 +5,6 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  # Sesuaikan versi SDK jika perlu
   sdk: '>=3.4.1 <4.0.0'
 
 dependencies:
@@ -18,10 +17,13 @@ dependencies:
   video_player: ^2.8.6
 
   # =============================================================
-  # === DEPENDENSI PENTING UNTUK PROYEK INI ===
-  sqflite: ^2.3.3+1  # Database offline
-  path: ^1.9.0       # Helper untuk path database
-  uuid: ^4.4.0       # <-- INI YANG PALING PENTING UNTUK MEMPERBAIKI ERROR
+  # === DEPENDENSI DATABASE ===
+  sqflite: ^2.3.3+1    # Database offline (Android/iOS)
+  path: ^1.9.0         # Helper path
+  uuid: ^4.4.0         # Generator ID unik
+
+  # === TAMBAHAN WAJIB UNTUK WEB AGAR TIDAK ERROR ===
+  sqflite_common_ffi_web: ^0.4.4  # <--- INI KUNCI PERBAIKANNYA
   # =============================================================
 
 dev_dependencies:
@@ -29,8 +31,6 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^4.0.0
-
-  # Paket untuk mengganti nama paket aplikasi (bundle ID)
   change_app_package_name: ^1.1.0
 
 flutter:
